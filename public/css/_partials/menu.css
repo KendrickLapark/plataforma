@@ -1,0 +1,33 @@
+nav {
+    position: relative;
+    justify-content: end;
+    border: 1px solid chocolate;
+    padding-block: 50px;
+
+}
+
+ul {
+    position:absolute;
+    bottom: 0;
+    right: 0;
+    text-align: right;
+    list-style: none;
+    padding: 10px;
+    margin-bottom: auto;
+    border: 2px solid grey;
+}
+
+li {
+    display: inline;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+li:hover{
+    background-color: deepskyblue;
+}
+
+li:hover a{
+    color: white;
+}

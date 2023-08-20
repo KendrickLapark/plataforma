@@ -1,0 +1,30 @@
+.container{
+    border: 2px solid yellow;
+    text-align: center;
+    margin-inline: auto;
+}
+
+.container-form{
+    border: 2px solid blue;
+    margin-inline: auto;
+    width: fit-content;
+}
+
+form{
+    border: 2px solid brown;
+    padding-inline: 100px;
+}
+
+label{
+    display: block;
+}
+
+input{
+    margin-bottom: 10px;
+}
+
+button{
+    display: flex;
+    margin-inline: auto;
+    margin-block: 10px;
+}

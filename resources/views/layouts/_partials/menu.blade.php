@@ -6,3 +6,5 @@
         </ul>
     </nav>
 </header>
+
+<link rel="stylesheet" href="{{ asset('css/_partials/menu.css') }}">
