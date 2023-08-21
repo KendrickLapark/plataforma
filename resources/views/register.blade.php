@@ -16,8 +16,9 @@
 
             <div class="container-form">
 
-                <form action="">
+                <form method="POST" {{ route('store') }}>
 
+                    @csrf
                     <label for="nombre"> Nombre </label>
                     <input type="text" name="nombre">
 
@@ -33,9 +34,9 @@
                     <label for="contraseña"> Contraseña </label>
                     <input type="text" name="contraseña">
 
-                    <label for="repetir_contraseña"> Repetir contraseña </label>
+                    {{-- <label for="repetir_contraseña"> Repetir contraseña </label>
                     <input type="text" name="repetir_contraseña">
-
+ --}}
                     <label for="edad"> Edad </label>
                     <input type="date" name="edad">
 
