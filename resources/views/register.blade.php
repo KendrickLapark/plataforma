@@ -22,8 +22,8 @@
                     <label for="nombre"> Nombre </label>
                     <input type="text" name="nombre">
 
-                    <label for="primer_apellido"> Primer apellido </label>
-                    <input type="text" name="primer_apellido">
+                    <label for="apellido"> Primer apellido </label>
+                    <input type="text" name="apellido">
 
                     <label for="segundo_apellido"> Segundo apellido </label>
                     <input type="text" name="segundo_apellido">
@@ -31,8 +31,8 @@
                     <label for="email"> Email </label>
                     <input type="text" name="email">
 
-                    <label for="contraseña"> Contraseña </label>
-                    <input type="text" name="contraseña">
+                    {{-- <label for="password"> Contraseña </label>
+                    <input type="text" name="password"> --}}
 
                     {{-- <label for="repetir_contraseña"> Repetir contraseña </label>
                     <input type="text" name="repetir_contraseña">
@@ -49,8 +49,8 @@
                     <label for="pais"> País </label>
                     <input type="text" name="pais">
 
-                    <button type="submit" name="aceptar" value="aceptar"> Aceptar </button>
-                    <button type="submit" name="atras" value="atras"> Atrás </button>
+                    <button type="submit" name="aceptar" value="aceptar"> Aceptar </button>{{-- 
+                    <button type="submit" name="atras" value="atras"> Atrás </button> --}}
 
                 </form>
                 

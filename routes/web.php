@@ -2,12 +2,13 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers;
+use App\Http\Controllers\UserController;
 
 Route::get('/', function(){
     return view('home');
 })->name('home');
 
-Route::post('/register', function(){
+Route::match(['get', 'post'] ,'/register', function(){
     return view('register');
 })->name('register');
 
