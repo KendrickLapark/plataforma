@@ -1,0 +1,35 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.container{
+    border: 1px blue solid;
+    height: 87vh;
+}
+
+.nav-links{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    float: left;
+    height: 100%;
+    padding: 0;
+    border: 1px solid grey;
+    text-align: center;
+}
+
+.nav-links li{
+    border: 1px solid grey;
+    box-sizing: border-box;
+    padding-inline: 40px;
+    padding-block: 15px;
+}
+
+.nav-links li a{ 
+    color: black;
+}
+
+.nav-links li a:hover{ 
+    color: white;
+}

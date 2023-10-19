@@ -1,0 +1,13 @@
+.top_container{ 
+    display: flex;
+}
+
+.top_container img{ 
+    width: 100%;
+    height: 400px; 
+    margin:auto;
+}
+
+.center_container{
+    text-align: center;
+}

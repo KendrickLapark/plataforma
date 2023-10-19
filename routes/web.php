@@ -2,19 +2,31 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UserController;
 
-Route::get('/', function(){
-    return view('home');
-})->name('home');
 
-Route::match(['get', 'post'] ,'/register', function(){
-    return view('register');
-})->name('register');
+Route::middleware(['guest'])->group(function(){
+    Route::get('/', function(){
+        return view('home');
+    })->name('home'); 
+    Route::post('/login', [LoginController::class, 'doLogin'])->name('doLogin');
+    Route::get('/register', [UserController::class, 'register'])->name('register');
+    Route::post('/store', [UserController::class , 'store'])->name('store');
+});
 
-Route::get('/iniciar_sesión', function(){
+
+Route::get('/login', function(){
     return view('login');
 })->name('login');
 
-Route::post('/store', [UserController::class , 'store']) 
-    ->name('store');
+Route::middleware(['auth'])->group(function(){
+    Route::get('/dashboard', [UserController::class, 'dashboard'])->name('dashboard');
+    Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+    Route::get('/products', [ProductController::class, 'index'] )->name('products');   
+    Route::get('/products/create', [ProductController::class, 'create_product'])->name('products.create');
+    Route::get('/products/search', [ProductController::class, 'search'] )->name('products.search');
+    Route::post('/products/store', [ProductController::class, 'store'])->name('products.store');
+});
+

@@ -17,9 +17,9 @@ return new class extends Migration
             $table->string('apellido', 255);
             $table->string('segundo_apellido', 255);
             $table->date('edad');
-            $table->string('poblacion', 255);
-            $table->string('provincia', 255);
-            $table->string('pais', 255);
+            $table->string('poblacion', 255)->nullable();
+            $table->string('provincia', 255)->nullable();
+            $table->string('pais', 255)->nullable();
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');

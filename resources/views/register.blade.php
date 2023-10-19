@@ -11,51 +11,54 @@
 @section('content')
 
     <div class="container">
-
-        <h1> Registro </h1>
-
+        
             <div class="container-form">
 
-                <form method="POST" {{ route('store') }}>
-
+                <form action="{{route('store')}}" method="post">
                     @csrf
-                    <label for="nombre"> Nombre </label>
-                    <input type="text" name="nombre">
+                                    
+                    <h1> Registro </h1>
 
-                    <label for="apellido"> Primer apellido </label>
+                    <label>Nombre: </label>
+                    <input type="text" name="nombre" autofocus>
+                    @error('nombre')
+                        <p style="color:red"> {{ $message }} </p>
+                    @enderror
+                   
+                    <label>Apellido: </label>
                     <input type="text" name="apellido">
-
-                    <label for="segundo_apellido"> Segundo apellido </label>
+                    @error('apellido')
+                        <p style="color:red"> {{ $message }} </p>                   
+                    @enderror
+                   
+                    <label>Segundo apellido: </label>
                     <input type="text" name="segundo_apellido">
-
-                    <label for="email"> Email </label>
-                    <input type="text" name="email">
-
-                    {{-- <label for="password"> Contraseña </label>
-                    <input type="text" name="password"> --}}
-
-                    {{-- <label for="repetir_contraseña"> Repetir contraseña </label>
-                    <input type="text" name="repetir_contraseña">
- --}}
-                    <label for="edad"> Edad </label>
+                    @error('segundo_apellido')
+                        <p style="color:red"> {{ $message }} </p>                      
+                    @enderror
+                    
+                    <label>Edad: </label>
                     <input type="date" name="edad">
+                    @error('edad')
+                        <p style="color:red"> {{ $message }} </p>                       
+                    @enderror
+ 
+                    <label>Email: </label>
+                    <input type="email" name="email">
+                    @error('email')
+                        <p style="color:red"> {{ $message }} </p>              
+                    @enderror
+                    
+                    <label>Contraseña: </label>
+                    <input type="password" name="password"> 
+                    @error('password')
+                        <p style="color:red"> {{ $message }} </p>                    
+                    @enderror
 
-                    <label for="poblacion"> Población </label>
-                    <input type="text" name="poblacion">
-
-                    <label for="provincia"> Provincia </label>
-                    <input type="text" name="provincia">
-
-                    <label for="pais"> País </label>
-                    <input type="text" name="pais">
-
-                    <button type="submit" name="aceptar" value="aceptar"> Aceptar </button>{{-- 
-                    <button type="submit" name="atras" value="atras"> Atrás </button> --}}
-
+                    <input type="submit" value="Aceptar">
                 </form>
                 
             </div>
-
     </div>
 
 @endsection

@@ -2,8 +2,14 @@ nav {
     position: relative;
     justify-content: end;
     border: 1px solid chocolate;
-    padding-block: 50px;
 
+}
+
+.logo{
+    display: flex;
+    margin-left: 50px;
+    margin-block: auto;
+    cursor: pointer;
 }
 
 ul {
@@ -14,7 +20,6 @@ ul {
     list-style: none;
     padding: 10px;
     margin-bottom: auto;
-    border: 2px solid grey;
 }
 
 li {
@@ -30,4 +35,8 @@ li:hover{
 
 li:hover a{
     color: white;
+}
+
+li a{
+    text-decoration: none;
 }

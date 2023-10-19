@@ -8,8 +8,14 @@
     <title> @yield('title') </title>
 </head>
 <body>
-    @include('layouts._partials.menu')
-    @yield('content')
-    @yield('scripts')
+        @include('layouts._partials.menu')
+        @include('layouts._partials.message')
+
+        @auth
+            @include('layouts._partials.leftbar')
+        @endauth
+
+        @yield('content')
+        @yield('scripts')
 </body>
 </html>
