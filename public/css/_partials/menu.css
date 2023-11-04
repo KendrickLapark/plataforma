@@ -1,8 +1,8 @@
 nav {
-    position: relative;
-    justify-content: end;
+    display: flex;
+    justify-content: space-between;
+    align-self: flex-end;
     border: 1px solid chocolate;
-
 }
 
 .logo{
@@ -13,9 +13,8 @@ nav {
 }
 
 ul {
-    position:absolute;
-    bottom: 0;
-    right: 0;
+    display: flex;
+    align-self: flex-end;
     text-align: right;
     list-style: none;
     padding: 10px;

@@ -7,10 +7,11 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UserController;
 
 
+Route::get('/', function(){
+    return view('home');
+})->name('home'); 
+
 Route::middleware(['guest'])->group(function(){
-    Route::get('/', function(){
-        return view('home');
-    })->name('home'); 
     Route::post('/login', [LoginController::class, 'doLogin'])->name('doLogin');
     Route::get('/register', [UserController::class, 'register'])->name('register');
     Route::post('/store', [UserController::class , 'store'])->name('store');
@@ -18,7 +19,7 @@ Route::middleware(['guest'])->group(function(){
 
 
 Route::get('/login', function(){
-    return view('login');
+    return view('auth.login');
 })->name('login');
 
 Route::middleware(['auth'])->group(function(){

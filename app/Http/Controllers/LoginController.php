@@ -14,6 +14,8 @@ class LoginController extends Controller
             $request->session()->regenerate();
             return redirect()->route('dashboard')->with('status', 'Logeado con éxito');
         }
+
+            return redirect()->route('login')->with('status', 'Error en el inicio de sesión');
         
     }
 

@@ -4,18 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    @auth
+        <link rel="stylesheet" href="css/common/baseDashboards.css">
+    @else
+        <link rel="stylesheet" href="css/common/base.css">
+    @endauth
+
     @yield('styles')
     <title> @yield('title') </title>
 </head>
 <body>
+    <header>
         @include('layouts._partials.menu')
         @include('layouts._partials.message')
+    </header>
+    
+    <main>
 
-        @auth
-            @include('layouts._partials.leftbar')
-        @endauth
+        <aside>
+            @auth
+                @include('layouts._partials.leftbar')
+            @endauth
+        </aside>
 
         @yield('content')
-        @yield('scripts')
+    </main>
+
+    @yield('scripts')
 </body>
 </html>

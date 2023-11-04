@@ -1,25 +1,14 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body{
-    padding: 0;
-
-}
-
 .container{
     display: flex;
-    height: 87vh;
     align-items: center;
     text-align: center;
     justify-content: center;
+    height: 100%;
     background-image: linear-gradient(to right, #BAC1ED , #EEC4EC);
 }
 
 .container-form{
-    width: 25%;
+    width: 25vw;
 }
 
 form{
