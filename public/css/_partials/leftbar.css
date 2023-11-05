@@ -40,7 +40,26 @@
 }
 
 #sidebar.active {
-    margin-left: -250px;
+    margin-left: -180px;
+}
+
+#sidebar.active .nav-links li{
+    padding-left: 0px;
+    padding-inline: 0;
+    text-align: right;
+}
+
+#sidebar.active .nav-links span{
+    display: none;
+}
+
+#sidebar.active h1{
+    font-size: 0px;
+}
+
+#sidebar.active .nav-links li a i{
+    font-size: 25px;
+    margin-right: 25px;
 }
 
 .nav-links{

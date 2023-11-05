@@ -10,7 +10,7 @@ class ProductController extends Controller
 {
     public function index()
     {
-        return view('products');
+        return view('products.products');
     }
 
     public function search(Request $request)

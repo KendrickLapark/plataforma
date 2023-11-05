@@ -26,7 +26,7 @@ Route::middleware(['auth'])->group(function(){
     Route::get('/dashboard', [UserController::class, 'dashboard'])->name('dashboard');
     Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
     Route::get('/products', [ProductController::class, 'index'] )->name('products');   
-    Route::get('/products/create', [ProductController::class, 'create_product'])->name('products.create');
+    Route::get('/products/create', [ProductController::class, 'product_create'])->name('products.create');
     Route::get('/products/search', [ProductController::class, 'search'] )->name('products.search');
     Route::post('/products/store', [ProductController::class, 'store'])->name('products.store');
 });

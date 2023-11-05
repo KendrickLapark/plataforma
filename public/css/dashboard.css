@@ -1,9 +1,8 @@
 .container{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     width: 100%;
-    padding: 20px;
+    padding: 50px;
     text-align: center;
-    justify-content: center;
     background-image: linear-gradient(to right, #BAC1ED , #EEC4EC);
 }

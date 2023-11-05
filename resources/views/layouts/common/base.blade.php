@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     @auth
-        <link rel="stylesheet" href="css/common/baseDashboards.css">
+        <link rel="stylesheet" href="{{ asset('css/common/baseDashboards.css')}}">
     @else
         <link rel="stylesheet" href="css/common/base.css">
     @endauth

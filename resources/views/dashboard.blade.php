@@ -11,7 +11,3 @@
         <h1> Contenido del dashboard </h1>
     </div>
 @endsection
-
-@section('scripts')
-    <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
-@endsection
