@@ -16,8 +16,10 @@
 </head>
 <body>
     <header>
-        @include('layouts._partials.menu')
-        @include('layouts._partials.message')
+        @guest
+            @include('layouts._partials.menu')
+            @include('layouts._partials.message')
+        @endguest
     </header>
     
     <main>

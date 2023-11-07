@@ -1,0 +1,34 @@
+.container-bar{
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    padding-block: 10px;
+    padding-left: 30px;
+}
+
+.container-bar form{
+    display: flex;
+}
+
+.container-bar input[type=text] {
+    width: 300px;
+    padding-inline: 10px;
+    font-size: 17px;
+    border: none;
+}
+
+.container-bar input[type=submit] {
+    display: flex;
+    flex-direction: row;
+    margin-left: 40px;
+    padding-inline: 5px;
+    padding-block: 5px;
+    align-items: end;
+}
+
+.product-list{
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    list-style: none;
+}

@@ -4,20 +4,18 @@
 }
 
 #sidebar{
-    display: block;
-    position: relative;
     transition: all 0.3s;
     color: #ffffff;
 }
 
-#sidebar h1{
-    background-color: #2f89fc;
-    color: #ffffff;
-    margin-bottom: 20px;
-    padding-block: 20px;
-    padding-left: 30px;
-    font-family: "Poppins", Arial, sans-serif;
-    font-weight: 800;
+#sidebar .custom-menu i{
+    font-size: 24px;
+}
+
+.custom-menu{
+    position: relative;
+    width: fit-content;
+    left: 200px;
 }
 
 .toggle-btn{
@@ -27,25 +25,19 @@
     cursor: pointer;
 }
 
-#sidebar .custom-menu i{
-    font-size: 24px;
-}
-
-.custom-menu{
-    display: inline-block;
-    position: absolute;
-    top: 10px;
-    right: 0;
-    margin-right: -50px;
+.toggle-btn i{
+    color: white;
 }
 
 #sidebar.active {
     margin-left: -180px;
 }
 
+#sidebar.active .custom-menu{
+    left: 190px;
+}
+
 #sidebar.active .nav-links li{
-    padding-left: 0px;
-    padding-inline: 0;
     text-align: right;
 }
 
@@ -62,10 +54,25 @@
     margin-right: 25px;
 }
 
+#sidebar.active .toggle-btn i{
+    font-size: 25px;
+    margin-right: 45px;
+}
+
+#sidebar.active .fixed-li{
+    text-align: right;
+}
+
+#sidebar.active .fixed-li span{
+    display: none;
+}
+
+#sidebar.active .fixed-li i{
+    font-size: 25px;
+    margin-right: 25px;
+}
+
 .nav-links{
-    display: flex;
-    flex-direction: column;
-    float: left;
     min-width: 250px;
     max-width: 250px;
     height: 100%;
@@ -74,17 +81,21 @@
 }
 
 .nav-links li{
-    box-sizing: border-box;
     font-size: 16px;
     font-weight: 400;
     padding-block: 20px;
     padding-left: 30px;
 }
 
+.nav-links li:hover{
+    background-color: #2f89fc;
+}
+
 .nav-links li a{ 
     font-family: "Poppins", Arial, sans-serif;
     font-weight: 600;
     color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
 }
 
 .nav-links li:hover a{ 
@@ -93,4 +104,29 @@
 
 .nav-links li a i{
     margin-right: 15px;
+}
+
+.fixed-li{
+    position: absolute;
+    bottom: 0;
+    min-width: 250px;
+    max-width: 250px;
+    padding-block: 20px;
+    padding-left: 30px;
+    list-style: none;
+}
+
+.fixed-li:hover{
+    background-color: #2f89fc;
+}
+
+.fixed-li:hover a{
+    color: #ffffff;
+}
+
+.fixed-li a{
+    font-family: "Poppins", Arial, sans-serif;
+    text-decoration: none;  
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.6);
 }

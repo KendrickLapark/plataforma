@@ -28,6 +28,6 @@ Route::middleware(['auth'])->group(function(){
     Route::get('/products', [ProductController::class, 'index'] )->name('products');   
     Route::get('/products/create', [ProductController::class, 'product_create'])->name('products.create');
     Route::get('/products/search', [ProductController::class, 'search'] )->name('products.search');
-    Route::post('/products/store', [ProductController::class, 'store'])->name('products.store');
+    Route::post('/products/store', [ProductController::class, 'product_store'])->name('products.store');
 });
 
