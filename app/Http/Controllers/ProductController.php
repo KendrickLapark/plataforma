@@ -62,4 +62,13 @@ class ProductController extends Controller
 
             return redirect()->route('products')->with('status', 'Producto no creado.');
     }
+
+    public function product_show(Product $product){
+        return view('products.product', compact('product'));
+    }
+
+    public function product_delete(Product $product){
+        $product->delete();
+        return redirect()->route('products');
+    }
 }

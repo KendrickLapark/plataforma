@@ -1,23 +1,28 @@
-.container-bar{
+.container{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    box-sizing: border-box;
+    min-width: 100%;
+}
+
+.container_bar{
     text-align: left;
     padding-block: 10px;
     padding-left: 30px;
 }
 
-.container-bar form{
+.container_bar form{
     display: flex;
 }
 
-.container-bar input[type=text] {
+.container_bar input[type=text] {
     width: 300px;
     padding-inline: 10px;
     font-size: 17px;
     border: none;
 }
 
-.container-bar input[type=submit] {
+.container_bar input[type=submit] {
     display: flex;
     flex-direction: row;
     margin-left: 40px;
@@ -26,9 +31,10 @@
     align-items: end;
 }
 
-.product-list{
+.product_list{
     display: flex;
-    flex-direction: row;
+    box-sizing: border-box;
+    background-color:blueviolet;
     text-align: left;
     list-style: none;
 }

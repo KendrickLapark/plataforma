@@ -12,7 +12,7 @@
 
     <div class="container">
         
-            <div class="container-form">
+            <div class="container_form">
 
                 <form action="{{route('store')}}" method="post">
                     @csrf

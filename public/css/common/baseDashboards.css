@@ -5,19 +5,18 @@
 }
 
 body{
-    display: flex;
+    display: inline-flex;
     flex-direction: column;
     padding: 0;
     height: 100vh;
 }
 
 aside {
-    width: fit-content;
     background-color: #212121;
 }
 
 main {
     display: flex;
-    flex-direction: row;
     height: 100%;
+    max-width: 100%;
 }

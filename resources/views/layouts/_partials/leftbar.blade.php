@@ -18,12 +18,12 @@
         
     </ul>
 
-    <li class="fixed-li"> 
+    <div class="fixed-li"> 
         <form style="display:inline" action="{{route('logout')}}" method="post">
             @csrf
             <a href="#" onclick="this.closest('form').submit()"> <i class="fa-solid fa-right-from-bracket"></i> <span> Logout </span> </a>
         </form>
-    </li>
+    </div>
 
 </nav>
 <script src="https://kit.fontawesome.com/6528f2bb84.js" crossorigin="anonymous"></script>
